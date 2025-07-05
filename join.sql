@@ -26,3 +26,8 @@ SELECT * FROM post;
 
 SELECT title, username FROM post
     JOIN "user" on post.user_id = "user".id; 
+
+-- when we need to this same command with using aliasing;
+
+SELECT * FROM post p   
+    JOIN "user" u ON p.id = u.id;
