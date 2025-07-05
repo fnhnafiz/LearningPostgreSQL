@@ -1,4 +1,5 @@
--- Active: 1749706100502@@127.0.0.1@5432@blog_post
+-- Active: 1751037050208@@127.0.0.1@5432@blog_post
+
 SELECT * FROM person;
 INSERT INTO person VALUES('Moina','Aktet',27,true,'female','karonchara@email.com');
 ALTER TABLE person
@@ -19,3 +20,4 @@ DELETE FROM person
 -- How to add constrains with unique;
 ALTER TABLE person
     ADD constraint PK_person_user_age UNIQUE(user_age);
+
