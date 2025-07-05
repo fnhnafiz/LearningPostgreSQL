@@ -6,12 +6,8 @@ CREATE TABLE "user"(
 CREATE TABLE post(
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
-    user_id INTEGER REFERENCES "user"(id) ON DELETE SET NULL
+    user_id INTEGER REFERENCES "user"(id)
 );
-
-DROP TABLE "user";
-DROP TABLE post;
-
 INSERT INTO "user"(username) VALUES 
 ('Albert Einstein'),
 ('Isaac Newton'),
@@ -24,9 +20,9 @@ INSERT INTO post(title, user_id) VALUES
 ('How Vaccines Work: A Simple Guide', 1),
 ('Mendel and the Basics of Genetics', 4);
 
-SELECT * from "user";
-SELECT * from post;
 
-DELETE FROM "user"
-    WHERE id = 4;
+SELECT * FROM "user";
+SELECT * FROM post;
 
+SELECT title, username FROM post
+    JOIN "user" on post.user_id = "user".id; 
