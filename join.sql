@@ -15,13 +15,13 @@ INSERT INTO "user"(username) VALUES
 ('Richard Feynman');
 
 INSERT INTO post(title, user_id) VALUES
-('The Theory of Relativity Explained', 4),
+('The Theory of Relativity Explained',   4),
 ('10 Amazing Facts About Black Holes', 2),
 ('How Vaccines Work: A Simple Guide', 1),
 ('Mendel and the Basics of Genetics', 4);
 
 
-SELECT * FROM "user";
+ SELECT * FROM "user";
 SELECT * FROM post;
 
 SELECT title, username FROM post
